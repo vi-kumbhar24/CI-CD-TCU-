@@ -1,0 +1,751 @@
+lear@sr-test1:~/eclipse-workspace/ReferencePlatform$ python3.5 180901_TestScript_v5.2.6.py
+The Ethernet connection between host test machine and device under test exist: Available
+DM VERITY    :Enabled
+AUTOSAR      :Enabled
+V2X          :Enabled
+proprietary  :Encrypted
+autonet      :Encrypted
+user         :Encrypted
+System       :Encrypted
+Sierra Wireless Cellular Modem(192.168.90.1): Available
+Vehicle Emulator (192.168.90.52): Available
+TRU Manager(backend) (52.2.59.234): Available
+Internet: Available
+VPN: Available
+
+[================================================================================================================]
+[                              Start of the Testing : September04, 2018 10:20:57AM PDT                                ]
+[================================================================================================================]
+[Device Under Test       ]: Freescale i.MX6 Quad/DualLite (Device Tree)
+[Device Version          ]: 4.9.11-1.0.0+gc27010d #1 SMP PREEMPT Fri Aug 31 18:21:25 UTC 2018 armv7l GNU/Linux
+[Device Software Version ]: einstein 5.2.6 
+[Test Machine Version    ]: Linux 4.15.0-33-generic x86_64 GNU/Linux
+[================================================================================================================]
+
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:20:57AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_000
+[Test Case Name         ]: test_Collect_Performance_Metrics
+[Title                  ]: Collect the Reference Platform performance metrics
+[Product Requirement    ]: None
+[Development Task       ]: Miscellaneous
+[Test Automation Task   ]: CONLAREINS-474
+[================================================================================================================]
+1.REFP_000: 1: Time to successful SSH from power cycle: 0.20 Seconds
+2.REFP_000: 2: Time to first command from power cycle: 1.35 Seconds
+3.REFP_000: 3: Time to successfully contact backend(TRU Manager): 0.22 Seconds
+4.REFP_000: 4: Modem connection to the Internet: Connected
+5.REFP_000: 5: Hardware	: Freescale i.MX6 Quad/DualLite (Device Tree)
+6.REFP_000: 6: Version: 4.9.11-1.0.0+gc27010d (alex@yocto-builds2) (gcc version 6.2.0 (GCC) ) #1 SMP PREEMPT Fri Aug 31 18:21:25 UTC 2018
+7.REFP_000: 7: Board Name: SABREAUTO
+8.REFP_000: 8: Revision Number: MX6QP
+9.REFP_000: 9: MAC address or Serial Number of the board: 00:04:9f:04:17:58
+10.REFP_000: 10: Kernel ID: 1
+11.REFP_000: 11: Image File Name: imx6qp-sabreauto.dtb
+12.REFP_000: 12: Image File Size: 2f58
+13.REFP_000: 13: Memory Available: Filesystem               Size  Used Avail Use% Mounted on
+14.REFP_000: 14: Memory Available: /dev/root                123M  105M  7.6M  94% /
+15.REFP_000: 15: Memory Available: /dev/mapper/user          41M   31M  7.4M  81% /user
+16.REFP_000: 16: Memory Available: /dev/mapper/autonet      4.9M  2.4M  2.2M  53% /autonet
+17.REFP_000: 17: Memory Available: /dev/mapper/proprietary  6.8M  2.1M  4.3M  33% /proprietary
+18.REFP_000: 18: CPU Utilization:   0% usr   6% sys   0% nic  93% idle   0% io   0% irq   0% sirq
+19.REFP_000: 19: MemTotal:        2061868 kB
+20.REFP_000: 20: Memory Utilization:  85704K used, 1976164K free, 8752K shrd, 3184K buff, 44336K cached
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:00AM PDT                         ]
+[                                    Total:20 Passed:20 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:01AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_001
+[Test Case Name         ]: test_REFP_001_Prompt_and_Hostname
+[Title                  ]: Verify the prompt and Hostname of the Device to contain Einstein, Mac, path and version
+[Product Requirement    ]: EINST-001
+[Development Task       ]: CONLAREINS-68
+[Test Automation Task   ]: CONLAREINS-78
+[================================================================================================================]
+21.REFP_001: 1: Verify that the prompt is correctly composed: PASSED
+22.REFP_001: 2: Verify the software version (5.2.6) is part of the prompt: PASSED
+23.REFP_001: 3: Verify the hostname to be 'einstein': PASSED
+24.REFP_001: 4: Verify that MAC(049F041758) and Serial(049F041758) in prompt are same: PASSED
+25.REFP_001: 5: Verify the username in the prompt to be 'root': PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:02AM PDT                         ]
+[                                    Total:5 Passed:5 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:03AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_002
+[Test Case Name         ]: test_REFP_002_Default_IP_DNS_DHCP
+[Title                  ]: Verify the default assigned ip of eth0 and running of DNS and DHCP
+[Product Requirement    ]: EINST-002
+[Development Task       ]: CONLAREINS-69
+[Test Automation Task   ]: CONLAREINS-79
+[================================================================================================================]
+26.REFP_002: 1: Verify that the DNS and DHCP processes are successfully running: PASSED
+27.REFP_002: 2: Verify that the default IP address of the Eth0 is 192.168.90.101: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:03AM PDT                         ]
+[                                    Total:2 Passed:2 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:04AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_003
+[Test Case Name         ]: test_REFP_003_Secure_Storage_Keys
+[Title                  ]: Verify the secure Data Storage implementation
+[Product Requirement    ]: EINST-014
+[Development Task       ]: CONLAREINS-26, CONLAREINS-27
+[Test Automation Task   ]: CONLAREINS-77
+[================================================================================================================]
+28.REFP_003: 1: Verify that Linux kernel crypto provider are available and working: PASSED
+29.REFP_003: 2: Verify that User code can access linux kernel crypto providers: PASSED
+30.REFP_003: 3: Verify that Random number generation from kernel provider is working: PASSED
+31.REFP_003: 4: Verify that AES-128 kernel provider is working (encrypt a block, decrypt a block): PASSED
+32.REFP_003: 5: Verify that SHA-256 kernel provider is working: PASSED
+33.REFP_003: 6: Verify that Library is linkable on deployment platform: PASSED
+34.REFP_003: 7: Verify that a “black key” can be created and saved to a file: PASSED
+35.REFP_003: 8: Verify that the “black key” can be restored from the file: PASSED
+36.REFP_003: 9: Verify that data can be round-trip encrypted and decrypted to memory using a black key: PASSED
+37.REFP_003: 10: Verify that data can be round-trip encrypted and decrypted to a file using a black key: PASSED
+38.REFP_003: 11: Verify that changing any bit in the encrypted data will cause decryption to fail: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:05AM PDT                         ]
+[                                    Total:11 Passed:11 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:06AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_004
+[Test Case Name         ]: test_REFP_004_Linux_as_OS
+[Title                  ]: Verify that device uses Linux as the Operating System
+[Product Requirement    ]: EINST-002
+[Development Task       ]: CONLAREINS-7
+[Test Automation Task   ]: CONLAREINS-109
+[================================================================================================================]
+39.REFP_004: 1: Verify that the device uses Linux as the Operating System: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:06AM PDT                         ]
+[                                    Total:1 Passed:1 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:07AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_005
+[Test Case Name         ]: test_REFP_005_Linux_Kernel_Version_ARM
+[Title                  ]: Verify that the Reference Platform is running the Linux Kernel version 4.9.11 for ARM
+[Product Requirement    ]: EINST-002
+[Development Task       ]: CONLAREINS-8
+[Test Automation Task   ]: CONLAREINS-110
+[================================================================================================================]
+40.REFP_005: 1: Verify that the device uses Linux version Kernel 4.9.11 as the Operating System: PASSED
+41.REFP_005: 2: Verify that the device uses Linux for ARM: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:07AM PDT                         ]
+[                                    Total:2 Passed:2 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:08AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_006
+[Test Case Name         ]: test_REFP_006_Ethernet_Driver
+[Title                  ]: Verify that the Ethernet driver is installed and working correctly
+[Product Requirement    ]: EINST-002
+[Development Task       ]: CONLAREINS-15
+[Test Automation Task   ]: CONLAREINS-120
+[================================================================================================================]
+42.REFP_006: 1: Verify that the Ethernet driver is installed and working correctly: PASSED
+43.REFP_006: 2: Verify that the Ethernet interface is UP: PASSED
+44.REFP_006: 3: Verify that the Ethernet interface speed is 1000 Mbps: PASSED
+45.REFP_006: 4: Verify that the Ethernet interface is Full Duplex: PASSED
+46.REFP_006: 5: Verify that Ethernet interface has the correct IP address 192.168.90.101: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:10AM PDT                         ]
+[                                    Total:5 Passed:5 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:11AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_007
+[Test Case Name         ]: test_REFP_007_Routing
+[Title                  ]: Verify that routing capabilities of the device
+[Product Requirement    ]: EINST-031
+[Development Task       ]: CONLAREINS-22
+[Test Automation Task   ]: CONLAREINS-140
+[================================================================================================================]
+47.REFP_007: 1: Verify that default gateway is setup to eth0: PASSED
+48.REFP_007: 2: Verify that routing table has 10.0.0.0 as eth0.100: PASSED
+49.REFP_007: 3: Verify that routing table has 192.168.90.0 has eth0: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:11AM PDT                         ]
+[                                    Total:3 Passed:3 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:12AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_008
+[Test Case Name         ]: test_REFP_008_SMACK_Module
+[Title                  ]: Verify that routing capabilities of the device
+[Product Requirement    ]: EINST-007
+[Development Task       ]: CONLAREINS-12, CONLAREINS-13
+[Test Automation Task   ]: CONLAREINS-118
+[================================================================================================================]
+50.REFP_008: 1: Verify that SMACK Rule '_ syslog w' is implemented and available: PASSED
+51.REFP_008: 2: Verify that SMACK Rule 'syslog _ w' is implemented and available: PASSED
+52.REFP_008: 3: Verify that SMACK Rule 'admin framework w' is implemented and available: PASSED
+53.REFP_008: 4: Verify that SMACK Rule 'framework admin w' is implemented and available: PASSED
+54.REFP_008: 5: Verify that SMACK Rule 'admin _ rwx' is implemented and available: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:12AM PDT                         ]
+[                                    Total:5 Passed:5 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:13AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_009
+[Test Case Name         ]: test_REFP_009_Monitor_Process
+[Title                  ]: Verify the successful implementation, running and functionality of Monitor process
+[Product Requirement    ]: EINST-024, EINST-055, EINST-040
+[Development Task       ]: CONLAREINS-43, CONLAREINS-417, CONLAREINS-402
+[Test Automation Task   ]: CONLAREINS-159, CONLAREINS-441, CONLAREIS-426
+[================================================================================================================]
+55.REFP_009: 1: Verify that the Monitor process is successfully running: PASSED
+56.REFP_009: 2: Verify that the monitor logs are being generated: PASSED
+57.REFP_009: 3: Verify that ping works from imx6 to SW Modem(192.168.90.1): PASSED
+58.REFP_009: 4: Verify that cellular connection is UP(cell_shell isconnected): PASSED
+59.REFP_009: 5: Verify that SIM is present and ready: PASSED
+60.REFP_009: 6: Verify that internet can be accessed over the cellular connection: PASSED
+61.REFP_009: 7: Verify that imx6 board can talk to TRU Manager ip address: PASSED
+62.REFP_009: 8: Verify that imx6 board can talk to TRU Manager URL: PASSED
+63.REFP_009: 9: Verify that monitor process is attempting to establish cellular connection: PASSED
+64.REFP_009: 10: Verify that monitor process show response to connect cellular connection: PASSED
+65.REFP_009: 11: Verify that SIM is ready: PASSED
+66.REFP_009: 12: Verify that monitor process has established good cellular connection: PASSED
+67.REFP_009: 13: Verify that monitor process has started the upLoop: PASSED
+68.REFP_009: 14: Verify that monitor process is attempting to connect to cell_talker process: PASSED
+69.REFP_009: 15: Verify that monitor process has connected to cell_talker: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:19AM PDT                         ]
+[                                    Total:15 Passed:15 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:20AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_010
+[Test Case Name         ]: test_REFP_010_Unitcomm_Process
+[Title                  ]: Verify the successful implementation, running and functionality of Unitcomm process
+[Product Requirement    ]: EINST-023
+[Development Task       ]: CONLAREINS-42
+[Test Automation Task   ]: CONLAREINS-158
+[================================================================================================================]
+70.REFP_010: 1: Verify that the Unitcomm process is successfully running: PASSED
+71.REFP_010: 2: Verify that the Unitcomm logs are being generated: PASSED
+72.REFP_010: 3: Verify that the hostname in unitcomm.log and Unit Id is same: PASSED
+73.REFP_010: 4: Verify that the TRU Manager ip address is correct in unitcomm.log: PASSED
+74.REFP_010: 5: Verify that WAN interface is up in unitcomm.log: PASSED
+75.REFP_010: 6: Verify that imx6 board can talk to TRU Manager ip address: PASSED
+76.REFP_010: 7: Verify that imx6 board can talk to TRU Manager URL: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:23AM PDT                         ]
+[                                    Total:7 Passed:7 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:24AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_011
+[Test Case Name         ]: test_REFP_011_Celltalker_Process
+[Title                  ]: Verify the successful implementation and functionality of Celltalker/SW Talker process
+[Product Requirement    ]: EINST-025
+[Development Task       ]: CONLAREINS-44
+[Test Automation Task   ]: CONLAREINS-160
+[================================================================================================================]
+77.REFP_011: 1: Verify that the sw_talker-eth process is successfully running: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:25AM PDT                         ]
+[                                    Total:1 Passed:1 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:26AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_012
+[Test Case Name         ]: test_REFP_012_LocationManager_Process
+[Title                  ]: Verify the successful implementation, and functionality of LocationManager process
+[Product Requirement    ]: EINST-022
+[Development Task       ]: CONLAREINS-41
+[Test Automation Task   ]: CONLAREINS-157
+[================================================================================================================]
+78.REFP_012: 1: Verify that the respawner process actually started the location manager: PASSED
+79.REFP_012: 2: Verify that the respawner process started capturing location manager logs: PASSED
+80.REFP_012: 3: Verify that the Location Manager process is successfully running: PASSED
+81.REFP_012: 4: Verify that the Location Manager logs have correct hostname: PASSED
+82.REFP_012: 5: Verify that the Location Manager logs have opened eth socket: PASSED
+83.REFP_012: 6: Verify that the gps_mon-eth has obtained time from the GPS: PASSED
+84.REFP_012: 7: Verify that the gps_mon-eth has obtained current location the GPS: PASSED
+85.REFP_012: 8: Verify that the gps_mon-eth has obtained current speed from the GPS: PASSED
+86.REFP_012: 9: Verify that the gps_mon-eth is unable to obtain time from GPS: PASSED
+87.REFP_012: 10: Verify that the gps_mon-eth is unable to obtain position from GPS: PASSED
+88.REFP_012: 11: Verify that the gps_mon-eth contains last known position and GPS position unavailable: PASSED
+89.REFP_012: 12: Verify that the number of satellites are available to get the fix: FAILED
+90.REFP_012: 13: Verify that the last position saved across the power cycle is available: FAILED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:27AM PDT                         ]
+[                                    Total:13 Passed:11 Failed:2 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:28AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_013
+[Test Case Name         ]: test_REFP_013_Event_Logger_Process
+[Title                  ]: Verify the successful implementation, and functionality of EventLogger process
+[Product Requirement    ]: EINST-056, EINST-057
+[Development Task       ]: CONLAREINS-418, CONLAREINS-419
+[Test Automation Task   ]: CONLAREINS-442, CONLAREINS-443
+[================================================================================================================]
+91.REFP_013: 1: Verify that the EventLogger process is successfully running: PASSED
+92.REFP_013: 2: Verify that the EventLogger process logs the events in TRU Manager successfully: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:40AM PDT                         ]
+[                                    Total:2 Passed:2 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:41AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_014
+[Test Case Name         ]: test_REFP_014_Config_Manager_Process
+[Title                  ]: Verify the successful implementation, and functionality of ConfigManager process
+[Product Requirement    ]: EINST-026
+[Development Task       ]: CONLAREINS-131
+[Test Automation Task   ]: CONLAREINS-233
+[================================================================================================================]
+93.REFP_014: 1: Verify that the ConfigManager process is successfully running: PASSED
+94.REFP_014: 2: Verify that the autonet.conf file exist in /autonet/etc folder: PASSED
+95.REFP_014: 3: Verify that the v1-servers with correct keys exist in autonet.conf and config_test: FAILED
+96.REFP_014: 4: Verify that the unit.server-port with correct keys exist in autonet.conf and config_test: FAILED
+97.REFP_014: 5: Verify that the unit.listen-port with correct keys exist in autonet.conf and config_test: FAILED
+98.REFP_014: 6: Verify that the unit.localdir with correct keys exist in autonet.conf and config_test: FAILED
+99.REFP_014: 7: Verify that the unit.speedtest-server with correct keys exist in autonet.conf and config_test: FAILED
+100.REFP_014: 8: Verify that the unit.update-servers with correct keys exist in autonet.conf and config_test: FAILED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:42AM PDT                         ]
+[                                    Total:8 Passed:8 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:43AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_015
+[Test Case Name         ]: test_REFP_015_Vehicle_Abstraction_Process
+[Title                  ]: Verify the successful implementation and functionality of Vehicle Abstraction process
+[Product Requirement    ]: EINST-028
+[Development Task       ]: CONLAREINS-54
+[Test Automation Task   ]: CONLAREINS-170
+[================================================================================================================]
+101.REFP_015: 1: Verify that the Vehicle Abstraction process is successfully running: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:43AM PDT                         ]
+[                                    Total:1 Passed:1 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:44AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_016
+[Test Case Name         ]: test_REFP_016_rootfs_mods_implementation
+[Title                  ]: Verify the successful implementation of re-design of rootfs_mods
+[Product Requirement    ]: EINST-001
+[Development Task       ]: CONLAREINS-81
+[Test Automation Task   ]: CONLAREINS-192
+[================================================================================================================]
+102.REFP_016: 1: Verify that the re-design of rootfs_mods is implemented correctly: FAILED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:44AM PDT                         ]
+[                                    Total:1 Passed:0 Failed:1 Skipped:0                   
+[================================================================================================================]
+.s
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:45AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_017
+[Test Case Name         ]: test_REFP_017_file_system_structure_en
+[Title                  ]: Verify the design of file system structure
+[Product Requirement    ]: EINST-021, EINST-004
+[Development Task       ]: CONLAREINS-67, CONLAREINS-34, CONLAREINS-253
+[Test Automation Task   ]: CONLAREINS-183, CONLAREINS-283
+[================================================================================================================]
+103.REFP_017: 1: Verify that the file structure has "/dev/dm-0" mounted correctly: PASSED
+104.REFP_017: 2: Verify that file system "/" is NOT encrypted: PASSED
+105.REFP_017: 3: Verify that "/" is ext4 type file structure: PASSED
+106.REFP_017: 4: Verify that "/" is read-only file structure: PASSED
+107.REFP_017: 5: Verify that "/" is Read Only type file structure: PASSED
+108.REFP_017: 6: Verify that the file structure has "/proprietary" mounted correctly: PASSED
+109.REFP_017: 7: Verify that "/proprietary" is encrypted: PASSED
+110.REFP_017: 8: Verify that "/proprietary" is ext4 type file structure: PASSED
+111.REFP_017: 9: Verify that "/proprietary" is Read Only type file structure: PASSED
+112.REFP_017: 10: Verify that the file structure has "/autonet" mounted correctly: PASSED
+113.REFP_017: 11: Verify that "/autonet" is encrypted: PASSED
+114.REFP_017: 12: Verify that "/autonet" is ext4 type file structure: PASSED
+115.REFP_017: 13: Verify that "/autonet" is Read/Write type file structure: PASSED
+116.REFP_017: 14: Verify that the file structure has "/user" mounted correctly: PASSED
+117.REFP_017: 15: Verify that "/user" is encrypted: PASSED
+118.REFP_017: 16: Verify that "/user" is ext4 type file structure: PASSED
+119.REFP_017: 17: Verify that "/user" is Read/Write type file structure: PASSED
+120.REFP_017: 18: Verify that the file structure has "/tmp" mounted correctly: PASSED
+121.REFP_017: 19: Verify that "/tmp" is NOT encrypted: PASSED
+122.REFP_017: 20: Verify that "/tmp" is tmpfs type file structure: PASSED
+123.REFP_017: 21: Verify that "/tmp" is Read/Write type file structure: PASSED
+124.REFP_017: 22: Verify that a password is required to mount a device(/dev/mmcblk2p11) using cryptsetup: PASSED
+125.REFP_017: 23: Verify that a device(/dev/mmcblk2p11) can be mounted if correct password used: PASSED
+126.REFP_017: 24: Verify that a device(/dev/mmcblk2p11) is active to be mounted using cryptsetup: PASSED
+127.REFP_017: 25: Verify that the creation of directory /tmp/test is successful: PASSED
+128.REFP_017: 26: Verify that the /tmp/test can be mounted /dev/mapper/test successfully: PASSED
+129.REFP_017: 27: Verify that the /tmp/test/etc has essential files present: PASSED
+130.REFP_017: 28: Verify that a /tmp/test can be unmounted /dev/mapper/test successfully: PASSED
+131.REFP_017: 29: Verify that a device(/dev/mmcblk2p11) can be closed successfully using cryptsetup: PASSED
+132.REFP_017: 30: Verify that the /tmp/test is deleted successfully: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:52AM PDT                         ]
+[                                    Total:30 Passed:30 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:53AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_018
+[Test Case Name         ]: test_REFP_018_Respawner_Process
+[Title                  ]: Verify the successful implementation and functionality of Respawner process
+[Product Requirement    ]: EINS-41
+[Development Task       ]: CONLAREINS-403
+[Test Automation Task   ]: CONLAREINS-427
+[================================================================================================================]
+133.REFP_018: 1: Verify that the Respawner process is successfully running: PASSED
+134.REFP_018: 2: Verify that unitcom process is successfully stopped: PASSED
+135.REFP_018: 3: Verify that unitcom process is successfully exited: PASSED
+136.REFP_018: 4: Verify that unitcom process is successfully restarted by Respawner: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:54AM PDT                         ]
+[                                    Total:4 Passed:4 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:55AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_019
+[Test Case Name         ]: test_REFP_019_dm_verity
+[Title                  ]: Verify the implementation of dm-verity feature
+[Product Requirement    ]: EINST-018
+[Development Task       ]: CONLAREINS-95
+[Test Automation Task   ]: CONLAREINS-206
+[================================================================================================================]
+137.REFP_019: 1: Verify that the root partition is mounted as "/dev/dm-0" to support dm-verity: PASSED
+138.REFP_019: 2: Verify that root partition "/" is NOT encrypted: PASSED
+139.REFP_019: 3: Verify that the root partition "/" is ext4 type file structure: PASSED
+140.REFP_019: 4: Verify that the root partition "/" is Read-Only type file structure: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:55AM PDT                         ]
+[                                    Total:4 Passed:4 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:56AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_020
+[Test Case Name         ]: test_REFP_020_OS_Linux_Hardened
+[Title                  ]: Verify if the OS(Linux) has hardened design
+[Product Requirement    ]: EINST-015, EINST-016, EINST-017, EINST-018, EINST-005, EINST-006
+[Development Task       ]: CONLAREINS-9, CONLAREINS-11
+[Test Automation Task   ]: CONLAREINS-117
+[================================================================================================================]
+141.REFP_020: 1: Verify that the Poison positive test works: PASSED
+142.REFP_020: 2: Verify that the Fortify positive test works: PASSED
+143.REFP_020: 3: Verify that the Fortify negative test works: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:56AM PDT                         ]
+[                                    Total:3 Passed:3 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:57AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_021
+[Test Case Name         ]: test_REFP_021_Legato
+[Title                  ]: Verify if Legato is installed and running successfully
+[Product Requirement    ]: EINST-008
+[Development Task       ]: CONLAREINS-19
+[Test Automation Task   ]: CONLAREINS-137
+[================================================================================================================]
+144.REFP_021: 1: Verify that the Legato (supervisor) is running successfully: PASSED
+145.REFP_021: 2: Verify that the Legato file structure is mounted: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:21:58AM PDT                         ]
+[                                    Total:2 Passed:2 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:21:59AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_022
+[Test Case Name         ]: test_REFP_022_Sierra_Wirless_eCall
+[Title                  ]: Verify if eCall Functionality works on Sierra Wireless NAD
+[Product Requirement    ]: EINST-055, EINST-40
+[Development Task       ]: CONLAREINS-50, CONLAREINS-417, CONLAREINS-402
+[Test Automation Task   ]: CONLAREINS-166, CONLAREINS-441, CONLAREINS-426
+[================================================================================================================]
+146.REFP_022: 1: Verify that ping works from imx6 to SW (192.168.90.1): PASSED
+147.REFP_022: 2: Verify that cellular connection is UP(cell_shell isconnected): PASSED
+148.REFP_022: 3: Verify that SIM is present and ready: PASSED
+149.REFP_022: 4: Verify that cellular service provider exist and is ATT&T: PASSED
+150.REFP_022: 5: Verify that MDN exist: FAILED
+151.REFP_022: 6: Verify that internet can be accessed over the cellular connection: PASSED
+152.REFP_022: 7: Verify that eCall test call placed successfully: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:22:07AM PDT                         ]
+[                                    Total:7 Passed:6 Failed:1 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:22:08AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_023
+[Test Case Name         ]: test_REFP_023_add_files_to_boot
+[Title                  ]: Verify if some mandatory files are added to /boot
+[Product Requirement    ]: EINST_001
+[Development Task       ]: CONLAREINS-80
+[Test Automation Task   ]: CONLAREINS-191
+[================================================================================================================]
+153.REFP_023: 1: Verify that file 'zImage' exist in /boot: PASSED
+154.REFP_023: 2: Verify that file 'u-boot.imx' exist in /boot: PASSED
+155.REFP_023: 3: Verify that file 'zImage-imx6qp-sabreauto.dtb' exist in /boot: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:22:08AM PDT                         ]
+[                                    Total:3 Passed:3 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:22:09AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_024
+[Test Case Name         ]: test_REFP_024_resolvedns
+[Title                  ]: Verify if DNS can be resolved
+[Product Requirement    ]: EINST_046
+[Development Task       ]: CONLAREINS-408
+[Test Automation Task   ]: CONLAREINS-432
+[================================================================================================================]
+156.REFP_024: 1: Verify that trumain-primary-ext.telematicsgateway.net is successfully resolved: PASSED
+157.REFP_024: 2: Verify that resolvedns process running successfully: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:22:09AM PDT                         ]
+[                                    Total:2 Passed:2 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:22:10AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_025
+[Test Case Name         ]: test_REFP_025_checklink
+[Title                  ]: Verify if DNS server is responding
+[Product Requirement    ]: EINST_052
+[Development Task       ]: CONLAREINS-414
+[Test Automation Task   ]: CONLAREINS-438
+[================================================================================================================]
+158.REFP_025: 1: Verify that DNS server is responding with the checklink command: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:22:11AM PDT                         ]
+[                                    Total:1 Passed:1 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:22:12AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_026
+[Test Case Name         ]: test_REFP_026_getfeature
+[Title                  ]: Verify if getfeature is implemented successfully
+[Product Requirement    ]: EINST_047
+[Development Task       ]: CONLAREINS-409
+[Test Automation Task   ]: CONLAREINS-433
+[================================================================================================================]
+159.REFP_026: 1: Verify that getfeature is responding correctly to display power schedule: PASSED
+160.REFP_026: 2: Verify that getfeature is responding correctly to display power control: PASSED
+161.REFP_026: 3: Verify that getfeature is responding correctly to GPS Config: PASSED
+162.REFP_026: 4: Verify that getfeature is responding correctly to Ecall Number: PASSED
+163.REFP_026: 5: Verify that getfeature is responding correctly to Ecall Device: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:22:13AM PDT                         ]
+[                                    Total:5 Passed:5 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:22:14AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_027
+[Test Case Name         ]: test_REFP_027_realtimestats
+[Title                  ]: Verify if real time statistics are updating
+[Product Requirement    ]: EINST_049
+[Development Task       ]: CONLAREINS-411
+[Test Automation Task   ]: CONLAREINS-435
+[================================================================================================================]
+164.REFP_027: 1: Verify that realtimestats are successfully collected: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:22:28AM PDT                         ]
+[                                    Total:1 Passed:1 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:22:29AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_028
+[Test Case Name         ]: test_REFP_028_Filesystem_Failover
+[Title                  ]: Verify that File System Failover process works correctly
+[Product Requirement    ]: EINST_030
+[Development Task       ]: CONLAREINS-239
+[Test Automation Task   ]: CONLAREINS-288
+[================================================================================================================]
+165.REFP_028: 1: Verify that current kernel is 1 : PASSED
+166.REFP_028: 2: Verify that command: 'flash_mount rootfs2-' was successfully issued: PASSED
+167.REFP_028: 3: Verify that command: 'echo hello > /mnt/tmp/hello.sh' was successfully issued: PASSED
+168.REFP_028: 4: Verify that command: 'flash_mount -u' was successfully issued: PASSED
+169.REFP_028: 5: Verify that command: 'fw_setenv kernel 2' was successfully issued: PASSED
+170.REFP_028: 6: Verify that the Filesystem Failover from 1 to 2 worked successfully: FAILED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:23:02AM PDT                         ]
+[                                    Total:6 Passed:5 Failed:1 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:23:03AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_029
+[Test Case Name         ]: test_REFP_029_Adaptive_Autosar_SomeIP
+[Title                  ]: Verify if VSOME/IP process is can be manually launched successfully
+[Product Requirement    ]: *
+[Development Task       ]: CONLAREINS-102
+[Test Automation Task   ]: CONLAREINS-213
+[================================================================================================================]
+171.REFP_029: 1: Verify that Diag-Log-Trace(DLT) daemon is included in the build: PASSED
+172.REFP_029: 2: Verify that VSOME/IP daemon is included in the build: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:23:04AM PDT                         ]
+[                                    Total:2 Passed:2 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:23:05AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_030
+[Test Case Name         ]: test_REFP_030_Interprocess_Authentication
+[Title                  ]: Verify if Interprocess Authentication is implemented
+[Product Requirement    ]: EINST_013
+[Development Task       ]: CONLAREINS-93
+[Test Automation Task   ]: CONLAREINS-204
+[================================================================================================================]
+173.REFP_030: 1: Verify that lamud process is running: PASSED
+174.REFP_030: 2: Verify that lamuc process generated a unique password, user root: PASSED
+175.REFP_030: 3: Verify that lamuc process generated the same unique password in under 10 seconds, user root: PASSED
+176.REFP_030: 4: Verify that lamuc process generated a different unique password for a different key, user root: PASSED
+177.REFP_030: 5: Verify that lamuc process generated a different password after 10 seconds for same key, user root: PASSED
+178.REFP_030: 6: Verify that lamuc process generated a unique password, user www-data: PASSED
+179.REFP_030: 7: Verify that lamuc process generated the same unique password in under 10 seconds, user www-data: PASSED
+180.REFP_030: 8: Verify that lamuc process generated a different unique password for a different key, user www-data: PASSED
+181.REFP_030: 9: Verify that lamuc process generated a different password after 10 seconds for same key, user www-data: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:23:26AM PDT                         ]
+[                                    Total:9 Passed:9 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:23:27AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_031
+[Test Case Name         ]: test_REFP_031_IPSEC
+[Title                  ]: Verify if IPSEC tunnel can be configured successfully
+[Product Requirement    ]: EINST_011
+[Development Task       ]: CONLAREINS-25
+[Test Automation Task   ]: CONLAREINS-143
+[================================================================================================================]
+182.REFP_031: 1: Verify that IPSEC tunnel is not operational already: PASSED
+183.REFP_031: 2: Verify that the Virtual Box(Vehicle Simulator) is not accessible without the IPSEC tunnel: PASSED
+184.REFP_031: 3: Verify that IPSEC tunnel started successfully: PASSED
+185.REFP_031: 4: Verify that IPSEC tunnel is running: FAILED
+186.REFP_031: 5: Verify that the IPSEC tunnel is configured and running successfully: FAILED
+187.REFP_031: 6: Verify that the IPSEC tunnel is stopped successfully: PASSED
+188.REFP_031: 7: Verify that the IPSEC tunnel is no more operational: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:24:01AM PDT                         ]
+[                                    Total:7 Passed:5 Failed:2 Skipped:0                   
+[================================================================================================================]
+.s
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:24:02AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_033
+[Test Case Name         ]: test_REFP_033_System_Size
+[Title                  ]: Verify if System Size is less than 128M
+[Product Requirement    ]: EINST_032
+[Development Task       ]: CONLAREINS-71
+[Test Automation Task   ]: CONLAREINS-226
+[================================================================================================================]
+Memory used by root: 105.0
+Memory used by user: 31.0
+Memory used by autonet: 2.4
+Memory used by proprietary: 2.1
+189.REFP_033: 1: Verify that total System Size(140.5) is under 128M: FAILED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:24:03AM PDT                         ]
+[                                    Total:1 Passed:0 Failed:1 Skipped:0                   
+[================================================================================================================]
+.
+[================================================================================================================]
+[                         Start of the Test Suite Execution : September04, 2018 10:24:04AM PDT                        ]
+[================================================================================================================]
+[Test Case ID           ]: REFP_034
+[Test Case Name         ]: test_REFP_034_Vehicle_Emulator
+[Title                  ]: Verify if Vehicle Emulator is installed and is operational
+[Product Requirement    ]: *
+[Development Task       ]: CONLAREINS-66
+[Test Automation Task   ]: CONLAREINS-182
+[================================================================================================================]
+190.REFP_034: 1: Verify that the vehicle emulator is available: PASSED
+191.REFP_034: 2: Verify that the vehicle emulator is talking to Reference Platform: PASSED
+192.REFP_034: 3: Verify that the "remote_commands" process is running on the Vehicle Emulator: PASSED
+193.REFP_034: 4: Verify that the "gpssim.py" process is running on the Vehicle Emulator: PASSED
+194.REFP_034: 5: Verify that the "ve_control.py" process is running on the Vehicle Emulator: PASSED
+195.REFP_034: 6: Verify that Vehicle Emulator is running on the correct VIN: PASSED
+196.REFP_034: 7: Verify that Vehicle driver door is closed: PASSED
+197.REFP_034: 8: Verify that Vehicle driver door Open is issued successfully: PASSED
+198.REFP_034: 9: Verify that Vehicle driver door is Opened: PASSED
+199.REFP_034: 10: Verify that Vehicle driver door Close is issued successfully: PASSED
+200.REFP_034: 11: Verify that Vehicle locks unlock scenario is normal: PASSED
+201.REFP_034: 12: Verify that Vehicle locks unlock scenario is set to fail: PASSED
+202.REFP_034: 13: Verify that Vehicle locks unlock scenario is fail: PASSED
+203.REFP_034: 14: Verify that Vehicle locks unlock scenario is set to normal again: PASSED
+[================================================================================================================]
+[                          End of the Test Suite Execution : September04, 2018 10:24:09AM PDT                         ]
+[                                    Total:14 Passed:14 Failed:0 Skipped:0                   
+[================================================================================================================]
+.
+----------------------------------------------------------------------
+Ran 36 tests in 192.841s
+
+OK (skipped=2)
+
+[================================================================================================================]
+[                          End of the Testing Summary: September04, 2018 10:24:10AM PDT                               ]
+[================================================================================================================]
+[                                    Total:203 Passed:195 Failed:8
+[================================================================================================================]
